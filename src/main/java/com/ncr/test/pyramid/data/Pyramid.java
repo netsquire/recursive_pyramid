@@ -51,36 +51,6 @@ public class Pyramid {
         return rows;
     }
 
-    public String marked_unshifted(int i, int j) {
-        final StringBuilder sb = new StringBuilder();
-        for (int row = 0; row < rows; row++) {
-            for (int col = 0; col < rows - row; col++) {
-                String view;
-                if(row==i || col==j) {
-                    view = "<<%05d>> ";
-                } else {
-                    view = "[%05d] ";
-                }
-                var datum = data[row][col];
-//                System.out.println("--[datum: " + datum + "]--");
-                sb.append(String.format(view, datum));
-            }
-            sb.append(Util.NEW_LINE);
-        }
-        return sb.toString();
-    }
-
-    public String unshifted() {
-        final StringBuilder sb = new StringBuilder();
-        for (int row = 0; row < rows; row++) {
-            for (int col = 0; col < rows - row; col++) {
-                sb.append(String.format("[%05d - (%d:%d)] ", data[row][col], row, col));
-            }
-            sb.append(Util.NEW_LINE);
-        }
-        return sb.toString();
-    }
-
     /**
      * Pretty print me
      */

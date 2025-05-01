@@ -12,16 +12,12 @@ import com.ncr.test.pyramid.solver.impl.YourSolver;
  */
 public class YourProgram {
     public static void main(String[] args) {
-        // let's have bigger data
+        // let's have bigger data (and money!!)
         final PyramidGenerator generator = new RandomPyramidGenerator(99, 10000);
         final Pyramid pyramid = generator.generatePyramid();
-        System.out.println(pyramid);
+//        System.out.println(pyramid); // to slow down the spam on display
 
-        // this is your implementation
         final PyramidSolver solver = new YourSolver();
-
-        System.out.println("Maximum path sum for this pyramid is :");
-        System.out.println(solver.pyramidMaximumTotal(pyramid));
+        System.out.println("Maximum path sum for this pyramid is :" + solver.pyramidMaximumTotal(pyramid));
     }
-    
 }

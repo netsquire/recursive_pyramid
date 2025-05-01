@@ -13,6 +13,7 @@ public class Util {
     public final static String NEW_LINE = System.lineSeparator();
 
     public static String repeatChar(char c, int n) {
+        // reformatted for the sake of readability
         return String
                 .valueOf(c)
                 .repeat(Math.max(0, n));

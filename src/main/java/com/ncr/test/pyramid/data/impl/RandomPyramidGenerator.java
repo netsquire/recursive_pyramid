@@ -31,7 +31,7 @@ public class RandomPyramidGenerator implements PyramidGenerator {
 
     @Override
     public Pyramid generatePyramid() {
-        final int[][] data = new int[this.rows][this.rows];
+        final int[][] data = new int[this.rows][this.rows]; // introduce direct reference to avoid issues
         for (int row = 0; row < this.rows; row++) {
             for (int col = 0; col < this.rows - row; col++) {
                 data[row][col] = random.nextInt(range) + 1;
